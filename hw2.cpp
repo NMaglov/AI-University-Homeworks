@@ -4,9 +4,10 @@
 #include <ctime>
 #include <chrono>
 #include <iomanip>
+const int MAX_N = 100;
 class Board
 {
-    static const int MAX_MOVES = 50;
+    static const int MAX_MOVES = 100;
     int n, totalConflicts;
     std::vector<int> row, queensOnRow, queensOnDiagonal, queensOnReverseDiagonal, candidates;
 
@@ -157,7 +158,7 @@ public:
                 if(totalConflicts == 0)
                 {
 
-                    if(n <= 100)
+                    if(n <= MAX_N)
                     {
                         print();
                     }
